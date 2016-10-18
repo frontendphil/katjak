@@ -16,9 +16,7 @@ type ModifiersT = {
   [name: string]: boolean,
 };
 
-type SelectModifiersFunction = (props: Object) => ModifiersT;
-
-type DefaultStyleFuncT = (defaults: StyleT | StyleFunctionT) => StyleT;
+type SelectModifiersFunctionT = (props: Object) => ModifiersT;
 
 function resolveDefaults(defaults: StyleT | StyleFunctionT, theme: ThemeT): StyleT {
   if (typeof defaults === "function") {

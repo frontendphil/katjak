@@ -1,11 +1,18 @@
-import React from 'react';
+// @flow
+import React, { Element } from 'react';
 
-import { Header } from './components'
+import { PageHeader } from './components'
 
-function App() {
+type PropsT = {
+  children: Element,
+};
+
+function App({ children }: PropsT) {
   return (
     <div className="container">
-      <Header />
+      <PageHeader />
+
+      { children }
     </div>
   );
 }

@@ -5,9 +5,15 @@ export type PaddingT = {
 };
 
 export type FontSizeT = {
-  small: number,
-  normal: number,
-  large: number,
+  size: {
+    small: number,
+    normal: number,
+    large: number,
+  },
+  family: {
+    headline: string,
+    normal: string,
+  },
 };
 
 export type ThemeT = {
