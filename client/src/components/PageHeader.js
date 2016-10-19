@@ -5,12 +5,15 @@ import { defaultStyle } from '../higher-order'
 
 import Headline from './Headline'
 import Menu from './Menu'
+import Link from './Link'
 
 function PageHeader() {
   return (
     <div>
       <Headline large>
-        kuchenbecker.
+        <Link to="/">
+          kuchenbecker.
+        </Link>
       </Headline>
 
       <Menu />

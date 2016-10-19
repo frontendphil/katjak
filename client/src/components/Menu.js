@@ -1,30 +1,48 @@
 // @flow
 import React from 'react'
+import { compose, mapProps } from 'recompose'
 import realSubstyle from 'substyle'
 
-import { defaultStyle } from '../higher-order'
+import { defaultStyle, provideTheme } from '../higher-order'
 
 import Link from './Link'
 
 const substyle = (...args) => ({ ...realSubstyle(...args) })
 
-function Menu(props) {
+function Menu({ activeStyle, ...rest }) {
   return (
-    <div className="row">
-      <div className="three columns">
-        <Link { ...substyle(props, 'link') } to="/about">
-          About
-        </Link>
-      </div>
+    <div { ...rest }>
+      <Link { ...substyle(rest, 'link') } to="/projects" activeStyle={ activeStyle }>
+        Projects
+      </Link>
+
+      <Link { ...substyle(rest, 'link') } to="/about" activeStyle={ activeStyle }>
+        About
+      </Link>
+
+      <Link { ...substyle(rest, 'link') } to="/contact" activeStyle={ activeStyle }>
+        Contact
+      </Link>
     </div>
   )
 }
 
-const styled = defaultStyle(({ font }) => ({
-  link: {
-    fontFamily: font.family.headline,
-    textAlign: 'center',
-  },
-}))
+export default compose(
+  defaultStyle(({ font, padding }) => ({
+    link: {
+      fontFamily: font.family.headline,
+      textAlign: 'center',
 
-export default styled(Menu)
+      marginRight: padding.large,
+    },
+  })),
+  provideTheme,
+  mapProps(({ theme: { colors, padding }, ...rest }) => ({
+    ...rest,
+
+    activeStyle: {
+      borderBottom: `1px solid ${colors.mono.ultradark}`,
+      paddingBottom: padding.small,
+    },
+  }))
+)(Menu)

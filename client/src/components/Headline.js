@@ -1,5 +1,6 @@
 // @flow
 import React, { Element } from 'react'
+import { omit } from 'lodash'
 
 import { defaultStyle } from '../higher-order'
 
@@ -13,7 +14,9 @@ type PropsT = {
 
 function Headline({ children, ...rest }: PropsT) {
   return (
-    <div { ...rest }>{ children }</div>
+    <div { ...omit(rest, 'small', 'normal', 'large') }>
+      { children }
+    </div>
   )
 }
 
