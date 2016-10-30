@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib",
+    "prebuild": "rimraf lib",
+    "start": "node lib/server.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/frontendphil/katjak.git"
+  },
+  "author": "Philipp Giese",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/frontendphil/katjak/issues"
+  },
+  "homepage": "https://github.com/frontendphil/katjak#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "rimraf": "^2.5.4"
+  }
+}
