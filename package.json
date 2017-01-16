@@ -6,13 +6,13 @@
   "scripts": {
     "clean": "rimraf server/static",
     "prebuild": "npm run clean",
-    "postinstall": "npm run install:client && npm run install:server",
+    "preinstall": "npm run install:client && npm run install:server",
+    "postinstall": "npm run build",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
     "build": "cd client && npm run build",
     "postbuild": "mv client/build/static server/static && mv client/build/index.html server/static",
-    "start": "node server/lib/server.js",
-    "prestart": "npm run build"
+    "start": "node server/lib/server.js"
   },
   "repository": {
     "type": "git",
