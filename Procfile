@@ -1,1 +1,1 @@
-web: server/lib/server.js
+web: npm start
