@@ -8,7 +8,8 @@
     "build": "babel src --out-dir lib",
     "prebuild": "rimraf lib",
     "start": "node lib/server.js",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "clean": "rimraf lib"
   },
   "repository": {
     "type": "git",

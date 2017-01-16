@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf server/static",
+    "clean": "npm run clean:client && npm run clean:server",
+    "clean:client": "cd client && npm run clean",
+    "clean:server": "cd server && npm run clean",
     "prebuild": "npm run clean",
     "preinstall": "npm run install:client && npm run install:server",
     "postinstall": "npm run build",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
-    "build": "cd client && npm run build",
-    "postbuild": "mv client/build/static server/static && mv client/build/index.html server/static",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "postbuild:client": "mv client/build/static server/static && mv client/build/index.html server/static",
+    "prebuild:client": "rimraf server/static",
     "start": "node server/lib/server.js"
   },
   "repository": {
