@@ -1,10 +1,15 @@
 // @flow
 import express from 'express'
+import path from 'path'
+
+const { PORT = 8080 } = process.env
 
 const app = express()
 
-app.use(express.static(`${__dirname}/static`))
+app.use('/static', express.static(path.join(__dirname, '..', 'static')))
 
-app.listen(8080, () => {
-  console.log('App running on port 8080')
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '..', 'static', 'index.html')))
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}`)
 })
