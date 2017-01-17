@@ -1,12 +1,14 @@
+// @flow
 import React from 'react'
+
+import { Markdown } from '../components'
+
+import content from './content'
 
 export default function About() {
   return (
-    <ul>
-      <li>Katja</li>
-      <ul>
-        <li>Kuchenbecker</li>
-      </ul>
-    </ul>
+    <Markdown>
+      { content }
+    </Markdown>
   )
 }
