@@ -10,7 +10,7 @@ import Link from './Link'
 function PageHeader() {
   return (
     <div>
-      <Headline large>
+      <Headline xlarge>
         <Link to="/">
           kuchenbecker.
         </Link>

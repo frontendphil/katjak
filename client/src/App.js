@@ -1,25 +1,26 @@
 // @flow
-import React, { Element } from 'react';
+import React from 'react';
 
-import { Headline } from './components'
+import { PageHeader, Divider } from './components'
 
 type PropsT = {
-  children: Element,
+  children: React$Element,
 };
 
 function App({ children }: PropsT) {
   return (
-    <Headline
-      large
+    <div
+      className="container"
       style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
+        fontFamily: 'Source Sans Pro',
       }}
     >
-      katja<b>kuchenbecker</b>.
-    </Headline>
+      <PageHeader />
+
+      <Divider />
+
+      { children }
+    </div>
   );
 }
 
