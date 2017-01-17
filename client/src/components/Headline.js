@@ -22,24 +22,40 @@ function Headline({ children, ...rest }: PropsT) {
 
 const styled = defaultStyle(({ font }) => ({
   fontFamily: font.family.headline,
+  fontWeight: 100,
 
   '&small': {
     fontSize: 20,
+
+    paddingLeft: 15,
+
+    borderLeft: '4px solid #a7dbe8',
   },
 
   '&normal': {
-    fontSize: 30,
-    fontWeight: 100,
+    fontSize: 25,
+
+    paddingLeft: 15,
+
+    borderLeft: '4px solid #c9de85',
   },
 
   '&large': {
-    fontSize: 40,
-    fontWeight: 100,
+    fontSize: 30,
+
+    paddingLeft: 15,
+
+    borderLeft: '4px solid #f0cc84',
   },
-}), ({ small, normal, large }: PropsT) => ({
+
+  '&xlarge': {
+    fontSize: 40,
+  },
+}), ({ small, normal, large, xlarge }: PropsT) => ({
   '&small': small,
   '&normal': normal,
   '&large': large,
+  '&xlarge': xlarge,
 }))
 
 export default styled(Headline)
