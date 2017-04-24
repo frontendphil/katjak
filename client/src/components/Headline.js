@@ -14,7 +14,7 @@ type PropsT = {
 
 function Headline({ children, ...rest }: PropsT) {
   return (
-    <div { ...omit(rest, 'small', 'normal', 'large') }>
+    <div { ...omit(rest, 'small', 'normal', 'large', 'xlarge') }>
       { children }
     </div>
   )
