@@ -1,26 +1,23 @@
 // @flow
 import React from 'react'
 import { compose, mapProps } from 'recompose'
-import realSubstyle from 'substyle'
 
 import { defaultStyle, provideTheme } from '../higher-order'
 
 import Link from './Link'
 
-const substyle = (...args) => ({ ...realSubstyle(...args) })
-
-function Menu({ activeStyle, ...rest }) {
+function Menu({ activeStyle, style, ...rest }) {
   return (
-    <div { ...rest }>
-      <Link { ...substyle(rest, 'link') } to="/projects" activeStyle={ activeStyle }>
+    <div { ...style } { ...rest }>
+      <Link style={ style('link') } to="/projects" activeStyle={ activeStyle }>
         Projects
       </Link>
 
-      <Link { ...substyle(rest, 'link') } to="/about" activeStyle={ activeStyle }>
+      <Link style={ style('link') } to="/about" activeStyle={ activeStyle }>
         About
       </Link>
 
-      <Link { ...substyle(rest, 'link') } to="/contact" activeStyle={ activeStyle }>
+      <Link style={ style('link') } to="/contact" activeStyle={ activeStyle }>
         Contact
       </Link>
     </div>

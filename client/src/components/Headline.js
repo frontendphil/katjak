@@ -12,9 +12,9 @@ type PropsT = {
   large: boolean,
 };
 
-function Headline({ children, ...rest }: PropsT) {
+function Headline({ children, style, ...rest }: PropsT) {
   return (
-    <div { ...omit(rest, 'small', 'normal', 'large', 'xlarge') }>
+    <div { ...omit(rest, 'small', 'normal', 'large', 'xlarge') } { ...style }>
       { children }
     </div>
   )

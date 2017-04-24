@@ -4,8 +4,8 @@ import { omit } from 'lodash'
 
 import { defaultStyle } from '../higher-order'
 
-function Divider(props) {
-  return <div { ...omit(props, 'dense', 'normal', 'wide') } />
+function Divider({ style, ...rest }) {
+  return <div { ...omit(rest, 'dense', 'normal', 'wide') } { ...style } />
 }
 
 const styled = defaultStyle(({ colors, padding }) => ({

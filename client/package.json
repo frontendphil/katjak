@@ -53,12 +53,12 @@
     "lodash": "^4.16.4",
     "marked": "^0.3.6",
     "radium": "^0.18.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
     "react-router": "^2.8.1",
     "recompose": "^0.20.2",
     "skeleton-css": "^2.0.4",
-    "substyle": "^3.0.1"
+    "substyle": "^5.1.2"
   },
   "scripts": {
     "start": "node scripts/start.js",

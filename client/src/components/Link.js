@@ -8,9 +8,9 @@ type PropsT = {
   children: Element,
 };
 
-function AppLink({ children, ...rest }: PropsT) {
+function AppLink({ children, style, ...rest }: PropsT) {
   return (
-    <Link { ...rest }>
+    <Link { ...rest } { ...style }>
       { children }
     </Link>
   )
