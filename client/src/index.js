@@ -9,12 +9,14 @@ import SplashScreen from './SplashScreen'
 import App from './App';
 
 import aboutRoutes from './about'
+import contactRoutes from './contact'
 
 ReactDOM.render(
   <Router history={ browserHistory }>
     <Route path="/" component={ SplashScreen } />
     <Route path="/content" component={ App }>
       { aboutRoutes }
+      { contactRoutes }
     </Route>
   </Router>,
   document.getElementById('root')
