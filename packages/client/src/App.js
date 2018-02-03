@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 
-import { PageHeader, Divider, Hero } from './components'
+import { PageHeader, Divider, Hero, Headline } from './components'
 
 import Work from './work'
 import About from './about'
@@ -16,19 +16,8 @@ function App({ match }: PropsT) {
   return (
     <div className="container">
       <Hero>
-        <p>KATJA KUCHENBECKER</p>
-        <p>
-          <span
-            style={{
-              backgroundColor: 'red',
-              color: 'white',
-              padding: 10,
-              fontStyle: 'italic',
-            }}
-          >
-            Creative development & social media
-          </span>
-        </p>
+        <Headline xlarge>Katja Kuchenbecker</Headline>
+        <img src={require('./assets/banner.gif')} />
       </Hero>
 
       <PageHeader />
