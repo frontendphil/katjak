@@ -11,9 +11,7 @@ function PageHeader() {
   return (
     <div>
       <Headline xlarge>
-        <Link to="/">
-          kuchenbecker.
-        </Link>
+        <Link to="/">kuchenbecker.</Link>
       </Headline>
 
       <Menu />

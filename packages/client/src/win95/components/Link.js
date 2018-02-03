@@ -8,10 +8,8 @@ import Bevel from './Bevel'
 
 function Link({ style, children, ...rest }) {
   return (
-    <Bevel style={ style }>
-      <OriginalLink { ...rest }>
-        { children }
-      </OriginalLink>
+    <Bevel style={style}>
+      <OriginalLink {...rest}>{children}</OriginalLink>
     </Bevel>
   )
 }

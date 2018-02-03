@@ -8,16 +8,24 @@ import Link from './Link'
 
 function Menu({ activeStyle, style, ...rest }) {
   return (
-    <div { ...style } { ...rest }>
-      <Link style={ style('link') } to="/content/projects" activeStyle={ activeStyle }>
+    <div {...style} {...rest}>
+      <Link
+        style={style('link')}
+        to="/content/projects"
+        activeStyle={activeStyle}
+      >
         Projects
       </Link>
 
-      <Link style={ style('link') } to="/content/about" activeStyle={ activeStyle }>
+      <Link style={style('link')} to="/content/about" activeStyle={activeStyle}>
         About
       </Link>
 
-      <Link style={ style('link') } to="/content/contact" activeStyle={ activeStyle }>
+      <Link
+        style={style('link')}
+        to="/content/contact"
+        activeStyle={activeStyle}
+      >
         Contact
       </Link>
     </div>

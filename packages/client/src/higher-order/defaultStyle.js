@@ -7,17 +7,18 @@ import omitProps from './omitProps'
 
 type ModifiersT = {
   [name: string]: boolean,
-};
+}
 
-const defaultStyle = (defaultStyles: DefaultStylesT, modifiers: ModifiersT) => compose(
-  provideTheme,
-  substyleDefaultStyle(
-    typeof defaultStyles === 'function' ?
-      ({ theme, ...rest }: Object) => defaultStyles(theme, rest) :
-      defaultStyles,
-    modifiers
-  ),
-  omitProps(['theme'])
-)
+const defaultStyle = (defaultStyles: DefaultStylesT, modifiers: ModifiersT) =>
+  compose(
+    provideTheme,
+    substyleDefaultStyle(
+      typeof defaultStyles === 'function'
+        ? ({ theme, ...rest }: Object) => defaultStyles(theme, rest)
+        : defaultStyles,
+      modifiers
+    ),
+    omitProps(['theme'])
+  )
 
 export default defaultStyle

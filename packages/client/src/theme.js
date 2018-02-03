@@ -12,21 +12,19 @@ export const font = {
   },
   family: {
     headline: 'Lato',
-    normal: 'Raleway'
-  }
+    normal: 'Raleway',
+  },
 }
 
 export const colors = {
-  primary: {
-
-  },
+  primary: {},
 
   mono: {
-    ultradark: "rgb(51, 51, 51)",
-    dark: "rgb(85, 85, 85)",
-    middle: "rgb(126, 126, 126)",
-    lighter: "rgb(204, 204, 204)",
-    light: "rgb(229, 229, 229)",
-    ultralight: "rgb(242, 242, 242)",
+    ultradark: 'rgb(51, 51, 51)',
+    dark: 'rgb(85, 85, 85)',
+    middle: 'rgb(126, 126, 126)',
+    lighter: 'rgb(204, 204, 204)',
+    light: 'rgb(229, 229, 229)',
+    ultralight: 'rgb(242, 242, 242)',
   },
 }

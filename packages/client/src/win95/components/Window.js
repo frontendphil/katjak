@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 
-import { defaultStyle } from '../../higher-order'
+import { defaultStyle } from '../../higher-order'
 
 import { Clearfix } from '../../components'
 
@@ -10,16 +10,12 @@ import Bevel from './Bevel'
 function Window({ children, header, buttons, style }) {
   return (
     <Bevel>
-      <div { ...style('header') }>
-        { header }
-      </div>
+      <div {...style('header')}>{header}</div>
 
-      <div { ...style('content') }>
-        { children }
+      <div {...style('content')}>
+        {children}
 
-        <div { ...style('buttons') }>
-          { buttons }
-        </div>
+        <div {...style('buttons')}>{buttons}</div>
 
         <Clearfix />
       </div>
@@ -43,6 +39,6 @@ export default defaultStyle(({ padding }) => ({
 
     color: 'white',
 
-    paddingLeft: padding.small
+    paddingLeft: padding.small,
   },
 }))(Window)

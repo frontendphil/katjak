@@ -5,10 +5,8 @@ import { defaultStyle } from '../../higher-order'
 
 function Bevel({ style, children }) {
   return (
-    <div { ...style }>
-      <div { ...style('content') }>
-        { children }
-      </div>
+    <div {...style}>
+      <div {...style('content')}>{children}</div>
     </div>
   )
 }
