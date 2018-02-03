@@ -2,15 +2,13 @@
 import React from 'react'
 import { defaultStyle } from './higher-order'
 
-import { Headline, Link } from './components'
+import { Headline } from './components'
 
 function SplashScreen({ style }) {
   return (
     <div {...style}>
       <Headline xlarge>
-        <Link to="content/about">
-          <b>katja</b>kuchenbecker
-        </Link>
+        <b>katja</b>kuchenbecker
       </Headline>
     </div>
   )
