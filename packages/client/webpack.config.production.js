@@ -6,7 +6,7 @@ const config = require('./webpack.config')
 
 module.exports = _.assign({}, config, {
   output: _.assign({}, config.output, {
-    publicPath: '/build',
+    publicPath: '/build/',
   }),
   plugins: [].concat(config.plugins, [
     new UglifyJsPlugin(),
