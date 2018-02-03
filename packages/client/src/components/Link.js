@@ -1,17 +1,17 @@
 // @flow
-import React, { Element } from 'react'
-import { Link } from 'react-router'
+import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import { defaultStyle } from '../higher-order'
 
 type PropsT = {
-  children: Element,
-};
+  children: React.Node,
+}
 
 function AppLink({ children, style, ...rest }: PropsT) {
   return (
-    <Link { ...rest } { ...style }>
-      { children }
+    <Link {...rest} {...style}>
+      {children}
     </Link>
   )
 }
@@ -23,7 +23,7 @@ const styled = defaultStyle(({ colors }) => ({
 
   ':hover': {
     textDecoration: 'underline',
-  }
+  },
 }))
 
 export default styled(AppLink)
