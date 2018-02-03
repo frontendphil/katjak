@@ -3,11 +3,24 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index',
+  entry: {
+    app: './src/index',
+    vendor: [
+      'react',
+      'react-dom',
+      'react-router',
+      'react-router-dom',
+      'lodash',
+      'history',
+      'glamor',
+      'substyle',
+      'substyle-glamor',
+    ],
+  },
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'app.js',
+    filename: '[name]-[hash].js',
     publicPath: '/',
   },
   plugins: [

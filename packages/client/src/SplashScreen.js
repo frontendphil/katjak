@@ -1,18 +1,12 @@
 // @flow
 import React from 'react'
+import { defaultStyle } from './higher-order'
 
 import { Headline, Link } from './components'
 
-export default function SplashScreen() {
+function SplashScreen({ style }) {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-      }}
-    >
+    <div {...style}>
       <Headline xlarge>
         <Link to="content/about">
           <b>katja</b>kuchenbecker
@@ -21,3 +15,14 @@ export default function SplashScreen() {
     </div>
   )
 }
+
+const styled = defaultStyle({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+  height: '100%',
+})
+
+export default styled(SplashScreen)

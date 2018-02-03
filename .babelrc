@@ -1,3 +1,15 @@
 {
-  "presets": ["env", "stage-0", "flow", "react"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ],
+    "@babel/preset-stage-0",
+    "@babel/preset-flow",
+    "@babel/preset-react"
+  ]
 }

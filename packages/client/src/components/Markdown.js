@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import marked from 'marked'
 import { StylesAsDataAttributes } from 'substyle-glamor'
@@ -48,6 +48,7 @@ const getVideoSource = (id, type) => {
 renderer.code = (code, lang) => {
   return renderToStaticMarkup(
     <iframe
+      title={`youtube-${code}`}
       width="560"
       height="315"
       style={{
@@ -66,8 +67,10 @@ marked.setOptions({
   breaks: true,
 })
 
-export default function Markdown({ children }) {
-  return (
-    <div dangerouslySetInnerHTML={{ __html: marked(children.toString()) }} />
-  )
+type PropsT = {
+  children: string,
+}
+
+export default function Markdown({ children }: PropsT) {
+  return <div dangerouslySetInnerHTML={{ __html: marked(children) }} />
 }
