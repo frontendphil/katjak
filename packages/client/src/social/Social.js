@@ -5,10 +5,10 @@ import { Markdown, Headline } from '../components'
 
 import content from './content.md'
 
-export default function Contact() {
+export default function About() {
   return (
     <div>
-      <Headline xlarge>Contact</Headline>
+      <Headline xlarge>Social</Headline>
       <Markdown>{content}</Markdown>
     </div>
   )

@@ -1,10 +1,15 @@
 // @flow
 import React from 'react'
 
-import { Markdown } from '../components'
+import { Markdown, Headline } from '../components'
 
 import content from './content.md'
 
 export default function About() {
-  return <Markdown>{content}</Markdown>
+  return (
+    <div>
+      <Headline xlarge>About</Headline>
+      <Markdown>{content}</Markdown>
+    </div>
+  )
 }

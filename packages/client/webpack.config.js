@@ -46,6 +46,10 @@ module.exports = {
         loader: 'raw-loader',
       },
       {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader',
+      },
+      {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader'],
       },
