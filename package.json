@@ -7,6 +7,7 @@
   "scripts": {
     "build": "lerna exec --parallel -- yarn build",
     "start": "cd packages/server && yarn start",
+    "heroku-postbuild": "yarn build",
     "lint": "eslint packages",
     "format":
       "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
