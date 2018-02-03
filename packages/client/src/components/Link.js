@@ -19,12 +19,13 @@ function AppLink({ children, style, ...rest }: PropsT) {
 
 export default compose(
   defaultStyle(({ colors }) => ({
+    borderBottom: '0 solid',
     textDecoration: 'none',
 
     color: colors.mono.ultradark,
 
     ':hover': {
-      textDecoration: 'underline',
+      borderBottom: `1px solid ${colors.mono.ultradark}`,
     },
   }))
 )(AppLink)

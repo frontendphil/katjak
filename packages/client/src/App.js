@@ -7,16 +7,13 @@ import { PageHeader, Divider } from './components'
 import Contact from './contact'
 import About from './about'
 
+import './main.css'
+
 type PropsT = {}
 
 function App({ match }: PropsT) {
   return (
-    <div
-      className="container"
-      style={{
-        fontFamily: 'Source Sans Pro',
-      }}
-    >
+    <div className="container">
       <PageHeader />
 
       <Divider />
