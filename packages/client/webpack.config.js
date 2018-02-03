@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.js',
@@ -15,6 +16,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -26,7 +28,11 @@ module.exports = {
       {
         test: /\.md$/,
         exclude: /node_modules/,
-        loader: 'file-loader',
+        loader: 'raw-loader',
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
       },
     ],
   },

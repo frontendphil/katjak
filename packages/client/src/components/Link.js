@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { Link } from 'react-router-dom'
+import { compose } from 'recompose'
 
 import { defaultStyle } from '../higher-order'
 
@@ -16,14 +17,14 @@ function AppLink({ children, style, ...rest }: PropsT) {
   )
 }
 
-const styled = defaultStyle(({ colors }) => ({
-  textDecoration: 'none',
+export default compose(
+  defaultStyle(({ colors }) => ({
+    textDecoration: 'none',
 
-  color: colors.mono.ultradark,
+    color: colors.mono.ultradark,
 
-  ':hover': {
-    textDecoration: 'underline',
-  },
-}))
-
-export default styled(AppLink)
+    ':hover': {
+      textDecoration: 'underline',
+    },
+  }))
+)(AppLink)

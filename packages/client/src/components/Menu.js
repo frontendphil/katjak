@@ -1,53 +1,38 @@
 // @flow
 import React from 'react'
-import { compose, mapProps } from 'recompose'
+import { compose } from 'recompose'
 
-import { defaultStyle, provideTheme } from '../higher-order'
+import { defaultStyle } from '../higher-order'
 
 import Link from './Link'
 
 function Menu({ activeStyle, style, ...rest }) {
   return (
     <div {...style} {...rest}>
-      <Link
-        style={style('link')}
-        to="/content/projects"
-        activeStyle={activeStyle}
-      >
-        Projects
-      </Link>
+      <div {...style('link')}>
+        <Link to="/content/projects">Projects</Link>
+      </div>
 
-      <Link style={style('link')} to="/content/about" activeStyle={activeStyle}>
-        About
-      </Link>
+      <div {...style('link')}>
+        <Link to="/content/about">About</Link>
+      </div>
 
-      <Link
-        style={style('link')}
-        to="/content/contact"
-        activeStyle={activeStyle}
-      >
-        Contact
-      </Link>
+      <div {...style('link')}>
+        <Link to="/content/contact">Contact</Link>
+      </div>
     </div>
   )
 }
 
 export default compose(
   defaultStyle(({ font, padding }) => ({
+    display: 'flex',
+
     link: {
       fontFamily: font.family.headline,
       textAlign: 'center',
 
       marginRight: padding.large,
-    },
-  })),
-  provideTheme,
-  mapProps(({ theme: { colors, padding }, ...rest }) => ({
-    ...rest,
-
-    activeStyle: {
-      borderBottom: `1px solid ${colors.mono.ultradark}`,
-      paddingBottom: padding.small,
     },
   }))
 )(Menu)
