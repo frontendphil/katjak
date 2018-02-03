@@ -6,14 +6,16 @@ const { PORT = 8080 } = process.env
 
 const app = express()
 
+console.log('App launched in: ', __dirname)
+
 app.use(
   '/build',
-  express.static(path.join(process.env.PWD, '..', 'client', 'build'))
+  express.static(path.join(__dirname, '..', '..', 'client', 'build'))
 )
 
 app.get('/*', (req, res) =>
   res.sendFile(
-    path.resolve(process.env.PWD, '..', 'client', 'build', 'index.html')
+    path.resolve(__dirname, '..', '..', 'client', 'build', 'index.html')
   )
 )
 
