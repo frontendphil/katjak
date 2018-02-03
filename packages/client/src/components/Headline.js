@@ -1,11 +1,11 @@
 // @flow
-import React, { Element } from 'react'
+import * as React from 'react'
 import { omit } from 'lodash'
 
 import { defaultStyle } from '../higher-order'
 
 type PropsT = {
-  children: Element,
+  children: React.Node,
 
   small: boolean,
   normal: boolean,

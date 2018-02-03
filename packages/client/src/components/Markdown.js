@@ -2,6 +2,7 @@
 import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import marked from 'marked'
+import { StylesAsDataAttributes } from 'substyle-glamor'
 
 import Headline from './Headline'
 
@@ -9,9 +10,11 @@ const renderer = new marked.Renderer()
 
 renderer.heading = (text, level) => {
   return renderToStaticMarkup(
-    <Headline large={level === 1} normal={level === 2} small={level >= 3}>
-      {text}
-    </Headline>
+    <StylesAsDataAttributes>
+      <Headline large={level === 1} normal={level === 2} small={level >= 3}>
+        {text}
+      </Headline>
+    </StylesAsDataAttributes>
   )
 }
 

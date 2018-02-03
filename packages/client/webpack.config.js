@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.js',
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
