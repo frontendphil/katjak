@@ -3,22 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "clean": "npm run clean:client && npm run clean:server",
-    "clean:client": "cd client && npm run clean",
-    "clean:server": "cd server && npm run clean",
-    "prebuild": "npm run clean",
-    "preinstall": "npm run install:client && npm run install:server",
-    "postinstall": "npm run build",
-    "install:client": "cd client && npm install",
-    "install:server": "cd server && npm install",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "postbuild:client": "mv client/build/static server/static && mv client/build/index.html server/static",
-    "prebuild:client": "rimraf server/static",
-    "start": "node server/lib/server.js"
+    "build": "lerna exec --parallel -- yarn build",
+    "start": "cd packages/server && yarn start",
+    "heroku-postbuild": "yarn build",
+    "lint": "eslint packages/*/src",
+    "format":
+      "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
   },
+  "workspaces": ["packages/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontendphil/katjak.git"
@@ -30,12 +24,23 @@
   },
   "homepage": "https://github.com/frontendphil/katjak#readme",
   "devDependencies": {
-    "eslint": "^3.9.0",
-    "eslint-config-signavio": "^1.3.2",
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-flow": "^7.0.0-beta.39",
+    "@babel/preset-react": "^7.0.0-beta.39",
+    "@babel/preset-stage-0": "^7.0.0-beta.39",
+    "babel-eslint": "^8.1.1",
+    "eslint": "^4.17.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.42.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.6.1",
+    "lerna": "^2.8.0",
+    "prettier": "^1.10.2",
     "rimraf": "^2.5.4"
   },
   "engines": {
-    "node": "7.0.0",
-    "npm": "4.0.0"
+    "node": "^8.0.0"
   }
 }

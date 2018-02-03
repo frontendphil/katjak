@@ -1,0 +1,38 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "babel-loader": "8.0.0-beta.0",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "2.5.4",
+    "style-loader": "^0.20.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "glamor": "^2.20.40",
+    "history": "^4.7.2",
+    "lodash": "^4.16.4",
+    "marked": "^0.3.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.26.0",
+    "substyle": "^6.0.0",
+    "substyle-glamor": "^1.0.4"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.production.js",
+    "prebuild": "yarn run clean",
+    "clean": "rimraf build",
+    "start": "webpack-dev-server"
+  }
+}

@@ -1,3 +1,4 @@
 {
-  extends: "signavio",
+  "extends": "react-app",
+  "parser": "babel-eslint"
 }
