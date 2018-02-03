@@ -7,12 +7,14 @@ const { PORT = 8080 } = process.env
 const app = express()
 
 app.use(
-  '/static',
-  express.static(path.join(process.env.PWD, 'server', 'static'))
+  '/build',
+  express.static(path.join(process.env.PWD, '..', 'client', 'build'))
 )
 
 app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(process.env.PWD, 'server', 'static', 'index.html'))
+  res.sendFile(
+    path.resolve(process.env.PWD, '..', 'client', 'build', 'index.html')
+  )
 )
 
 app.listen(PORT, () => {

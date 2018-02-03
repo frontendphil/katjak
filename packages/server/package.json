@@ -8,8 +8,8 @@
     "build": "babel src --out-dir lib",
     "prebuild": "yarn run clean",
     "start": "node lib/server.js",
-    "prestart": "npm run build",
-    "clean": "rimraf lib static"
+    "prestart": "yarn build",
+    "clean": "rimraf lib"
   },
   "repository": {
     "type": "git",

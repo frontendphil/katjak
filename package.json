@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "build": "lerna exec --parallel -- yarn build",
-    "postbuild":
-      "mv client/build/static server/static && mv client/build/index.html server/static",
+    "start": "cd packages/server && yarn start",
     "lint": "eslint packages",
     "format":
       "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""

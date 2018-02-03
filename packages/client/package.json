@@ -10,6 +10,7 @@
     "raw-loader": "^0.5.1",
     "rimraf": "2.5.4",
     "style-loader": "^0.20.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
@@ -28,7 +29,8 @@
     "substyle-glamor": "^1.0.4"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.production.js",
+    "prebuild": "yarn run clean",
     "clean": "rimraf build",
     "start": "webpack-dev-server"
   }
