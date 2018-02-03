@@ -36,7 +36,7 @@ function About({ style }) {
         kind="spotify"
         color="rgb(123, 179, 66)"
         image={require('../assets/social/spotify.png')}
-        link="https://spotify.com/user/katja.kuchenbecker"
+        link="https://open.spotify.com/user/spotify/playlist/37i9dQZEVXcNLcp6kTEqyR "
       />
       <Icon
         kind="xing"
