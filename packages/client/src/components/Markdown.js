@@ -3,20 +3,21 @@ import * as React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import marked from 'marked'
 import { StylesAsDataAttributes } from 'substyle-glamor'
+import { MemoryRouter } from 'react-router-dom'
 
 import Headline from './Headline'
+import Link from './Link'
 
 const renderer = new marked.Renderer()
 
-renderer.heading = (text, level) => {
-  return renderToStaticMarkup(
+renderer.heading = (text, level) =>
+  renderToStaticMarkup(
     <StylesAsDataAttributes>
       <Headline large={level === 1} normal={level === 2} small={level >= 3}>
         {text}
       </Headline>
     </StylesAsDataAttributes>
   )
-}
 
 const youtube = 'youtube'
 const vimeo = 'vimeo'
@@ -45,8 +46,8 @@ const getVideoSource = (id, type) => {
   }
 }
 
-renderer.code = (code, lang) => {
-  return renderToStaticMarkup(
+renderer.code = (code, lang) =>
+  renderToStaticMarkup(
     <iframe
       title={`youtube-${code}`}
       width="560"
@@ -59,7 +60,17 @@ renderer.code = (code, lang) => {
       allowfullscreen
     />
   )
-}
+
+renderer.link = (href: string, title: string, text: string) =>
+  renderToStaticMarkup(
+    <StylesAsDataAttributes>
+      <MemoryRouter>
+        <Link to={href} title={title} target="_blank" rel="noopener">
+          {text}
+        </Link>
+      </MemoryRouter>
+    </StylesAsDataAttributes>
+  )
 
 marked.setOptions({
   renderer,
