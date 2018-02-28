@@ -44,7 +44,7 @@ function Work({ style }) {
             Director
           </Project>
 
-          <Project time="2018" project="Plan&Los (funk)" company="Studio 71">
+          <Project time="2018" project="Plan&Los (funk)" company="Studio71">
             Script
           </Project>
 
