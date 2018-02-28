@@ -40,9 +40,17 @@ function App({ match, style }: PropsT) {
         creation & strategy.
       </div>
 
-      <Work />
-      <About />
-      <Contact />
+      <div {...style('section')}>
+        <Work />
+      </div>
+
+      <div {...style('section')}>
+        <About />
+      </div>
+
+      <div {...style('section')}>
+        <Contact />
+      </div>
     </div>
   )
 }
@@ -50,6 +58,10 @@ function App({ match, style }: PropsT) {
 const styled = defaultStyle(({ padding, font }) => ({
   menu: {
     marginTop: padding.normal,
+  },
+
+  section: {
+    marginBottom: 2 * padding.large,
   },
 
   catImportant: {

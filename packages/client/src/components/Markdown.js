@@ -3,7 +3,6 @@ import * as React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import marked from 'marked'
 import { StylesAsDataAttributes } from 'substyle-glamor'
-import { MemoryRouter } from 'react-router-dom'
 
 import Headline from './Headline'
 import Link from './Link'
@@ -64,11 +63,9 @@ renderer.code = (code, lang) =>
 renderer.link = (href: string, title: string, text: string) =>
   renderToStaticMarkup(
     <StylesAsDataAttributes>
-      <MemoryRouter>
-        <Link to={href} title={title} target="_blank" rel="noopener">
-          {text}
-        </Link>
-      </MemoryRouter>
+      <Link href={href} title={title} target="_blank" rel="noopener">
+        {text}
+      </Link>
     </StylesAsDataAttributes>
   )
 
