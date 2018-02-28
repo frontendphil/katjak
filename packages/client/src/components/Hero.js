@@ -12,15 +12,14 @@ const styled = defaultStyle({
   display: 'flex',
 
   flexDirection: 'column',
-  justifyContent: 'flex-end',
-  alignItems: 'flex-end',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
 
-  paddingRight: 50,
-  paddingBottom: 50,
+  paddingLeft: '33%',
 
   height: 300,
 
-  backgroundImage: `url(${require('../assets/hero2.jpg')})`,
+  backgroundImage: `url(${require('../assets/hero.jpg')})`,
   backgroundPosition: '50%',
   backgroundSize: 'cover',
 })
