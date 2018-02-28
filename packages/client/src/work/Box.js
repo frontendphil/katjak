@@ -21,15 +21,15 @@ export default compose(
     onMouseOut: ({ toggleHover }) => () => toggleHover(false),
   }),
   defaultStyle(
-    ({ colors }) => ({
+    ({ colors, font }) => ({
       position: 'relative',
       display: 'flex',
 
       justifyContent: 'center',
       alignItems: 'center',
 
-      width: 200,
-      height: 200,
+      width: 150,
+      height: 150,
 
       filter: 'grayscale(1)',
 
@@ -44,6 +44,8 @@ export default compose(
         justifyContent: 'center',
 
         bottom: 0,
+
+        fontSize: font.size.small,
 
         height: 0,
         width: '100%',

@@ -19,7 +19,7 @@ function Headline({ children, style, ...rest }: PropsT) {
 
 export default compose(
   defaultStyle(
-    ({ font }) => ({
+    ({ font, padding }) => ({
       fontFamily: font.family.headline,
       fontWeight: 400,
       fontStyle: 'italic',
@@ -44,6 +44,8 @@ export default compose(
 
       '&xlarge': {
         fontSize: 40,
+
+        marginBottom: padding.large,
       },
     }),
     ({ small, normal, large, xlarge }: PropsT) => ({

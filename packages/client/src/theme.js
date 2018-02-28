@@ -13,7 +13,7 @@ export const font = {
   },
   family: {
     headline: 'Montserrat',
-    normal: 'Raleway',
+    normal: 'Montserrat',
   },
 }
 

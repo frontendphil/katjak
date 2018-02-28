@@ -5,7 +5,8 @@ body,
 }
 
 * {
-  font-family: 'Source Sans Pro';
+  font-family: 'Montserrat';
+  font-weight: 300;
 
   box-sizing: border-box;
 }

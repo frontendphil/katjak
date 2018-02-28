@@ -10,15 +10,15 @@ function Menu({ activeStyle, style, ...rest }) {
   return (
     <div {...style} {...rest}>
       <div {...style('link')}>
-        <Link to="/content/projects">Projects</Link>
+        <Link href="#work">Work</Link>
       </div>
 
       <div {...style('link')}>
-        <Link to="/content/about">About</Link>
+        <Link href="#about">About</Link>
       </div>
 
       <div {...style('link')}>
-        <Link to="/content/contact">Contact</Link>
+        <Link href="#contact">Contact</Link>
       </div>
     </div>
   )

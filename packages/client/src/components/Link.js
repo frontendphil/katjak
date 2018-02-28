@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { compose } from 'recompose'
 
 import { defaultStyle } from '../higher-order'
@@ -11,9 +10,9 @@ type PropsT = {
 
 function AppLink({ children, style, ...rest }: PropsT) {
   return (
-    <Link {...rest} {...style}>
+    <a {...rest} {...style}>
       {children}
-    </Link>
+    </a>
   )
 }
 

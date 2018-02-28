@@ -7,7 +7,7 @@ import content from './content.md'
 
 export default function Contact() {
   return (
-    <div>
+    <div id="contact">
       <Headline xlarge>Contact</Headline>
       <Markdown>{content}</Markdown>
     </div>

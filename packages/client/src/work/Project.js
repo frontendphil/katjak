@@ -35,6 +35,8 @@ const styled = defaultStyle(({ padding }) => ({
   content: {
     flexGrow: 1,
 
+    width: 'calc(100% - 250px)',
+
     textTransform: 'uppercase',
 
     textOverflow: 'ellipsis',
