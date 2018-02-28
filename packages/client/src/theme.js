@@ -9,9 +9,10 @@ export const font = {
     small: 12,
     normal: 16,
     large: 20,
+    xlarge: 30,
   },
   family: {
-    headline: 'Lato',
+    headline: 'Montserrat',
     normal: 'Raleway',
   },
 }

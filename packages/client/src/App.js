@@ -1,7 +1,9 @@
 // @flow
 import * as React from 'react'
 
-import { PageHeader, Divider, Hero, Headline } from './components'
+import { defaultStyle } from './higher-order'
+
+import { Menu, Divider, Hero } from './components'
 
 import Work from './work'
 import About from './about'
@@ -12,15 +14,20 @@ import './main.css'
 
 type PropsT = {}
 
-function App({ match }: PropsT) {
+function App({ match, style }: PropsT) {
   return (
     <div className="container">
       <Hero>
-        <Headline xlarge>Katja Kuchenbecker</Headline>
-        <img src={require('./assets/banner.gif')} />
+        <div {...style('claim')}>
+          CREATIVE CONTENT DEVELOPMENT<br /> & SOCIAL MEDIA
+        </div>
+
+        <div {...style('cat')} />
       </Hero>
 
-      <PageHeader />
+      <div {...style('menu')}>
+        <Menu />
+      </div>
 
       <Divider />
 
@@ -32,4 +39,38 @@ function App({ match }: PropsT) {
   )
 }
 
-export default App
+const styled = defaultStyle(({ padding, font }) => ({
+  menu: {
+    marginTop: padding.normal,
+  },
+
+  claim: {
+    fontFamily: font.family.headline,
+    fontWeight: 400,
+    fontStyle: 'italic',
+    fontSize: font.size.xlarge,
+
+    padding: padding.normal,
+
+    borderRadius: 20,
+
+    color: 'white',
+
+    backgroundColor: '#ed4a57',
+  },
+
+  cat: {
+    position: 'absolute',
+
+    bottom: 10,
+    right: 10,
+
+    height: 26,
+    width: 35,
+
+    backgroundImage: `url(${require('./assets/Katzi.png')})`,
+    backgroundSize: 'cover',
+  },
+}))
+
+export default styled(App)

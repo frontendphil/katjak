@@ -8,15 +8,21 @@ function Hero({ style, children }) {
 }
 
 const styled = defaultStyle({
+  position: 'relative',
   display: 'flex',
 
   flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
+  justifyContent: 'flex-end',
+  alignItems: 'flex-end',
+
+  paddingRight: 50,
+  paddingBottom: 50,
 
   height: 300,
 
-  backgroundImage: `url(${require('../assets/hero.jpg')})`,
+  backgroundImage: `url(${require('../assets/hero2.jpg')})`,
+  backgroundPosition: '50%',
+  backgroundSize: 'cover',
 })
 
 export default styled(Hero)

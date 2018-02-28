@@ -21,30 +21,25 @@ export default compose(
   defaultStyle(
     ({ font }) => ({
       fontFamily: font.family.headline,
-      fontWeight: 100,
+      fontWeight: 400,
+      fontStyle: 'italic',
 
       '&small': {
         fontSize: 20,
 
         paddingLeft: 15,
-
-        borderLeft: '4px solid #a7dbe8',
       },
 
       '&normal': {
         fontSize: 25,
 
         paddingLeft: 15,
-
-        borderLeft: '4px solid #c9de85',
       },
 
       '&large': {
         fontSize: 30,
 
         paddingLeft: 15,
-
-        borderLeft: '4px solid #f0cc84',
       },
 
       '&xlarge': {
