@@ -27,19 +27,19 @@ export default compose(
       '&small': {
         fontSize: 20,
 
-        paddingLeft: 15,
+        marginBottom: padding.small,
       },
 
       '&normal': {
         fontSize: 25,
 
-        paddingLeft: 15,
+        marginBottom: padding.normal,
       },
 
       '&large': {
         fontSize: 30,
 
-        paddingLeft: 15,
+        marginBottom: padding.large,
       },
 
       '&xlarge': {

@@ -31,6 +31,7 @@ export default compose(
     link: {
       fontFamily: font.family.headline,
       textAlign: 'center',
+      textTransform: 'uppercase',
 
       marginRight: padding.large,
     },

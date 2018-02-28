@@ -16,6 +16,11 @@ function Icon({ kind, image, link, style }) {
 
 const styled = defaultStyle(({ colors, padding }, { color }) => ({
   textDecoration: 'none',
+  cursor: 'pointer',
+
+  ':hover': {
+    borderBottom: '0px solid',
+  },
 
   container: {
     borderRadius: '50%',

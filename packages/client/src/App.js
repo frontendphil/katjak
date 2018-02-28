@@ -8,7 +8,6 @@ import { Menu, Divider, Hero } from './components'
 import Work from './work'
 import About from './about'
 import Contact from './contact'
-import Social from './social'
 
 import './main.css'
 
@@ -31,10 +30,19 @@ function App({ match, style }: PropsT) {
 
       <Divider />
 
+      <div {...style('important')}>
+        <img
+          {...style('catImportant')}
+          alt="Katzi"
+          src={require('./assets/KatziWatermelon.png')}
+        />
+        digital concepts. consulting.<br />editorial and branded content
+        creation & strategy.
+      </div>
+
       <Work />
       <About />
       <Contact />
-      <Social />
     </div>
   )
 }
@@ -42,6 +50,32 @@ function App({ match, style }: PropsT) {
 const styled = defaultStyle(({ padding, font }) => ({
   menu: {
     marginTop: padding.normal,
+  },
+
+  catImportant: {
+    position: 'absolute',
+
+    left: 30,
+    top: '50%',
+
+    width: 37,
+
+    transform: 'translate(0, -50%)',
+  },
+
+  important: {
+    position: 'relative',
+
+    fontWeight: 900,
+    fontStyle: 'italic',
+    fontSize: font.size.xlarge,
+
+    textAlign: 'center',
+    textTransform: 'uppercase',
+
+    padding: 50,
+    paddingTop: 130,
+    paddingBottom: 130,
   },
 
   claim: {
