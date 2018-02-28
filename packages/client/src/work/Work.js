@@ -20,11 +20,13 @@ function Work({ style }) {
                 title="Guten Morgen Internet"
                 image={require('../assets/guten-morgen-internet.jpg')}
               />
+              <Box title="Plan&Los" image={require('../assets/plan-los.jpg')} />
+
               <Box
                 title="Load Studios"
                 image={require('../assets/load-studios.jpg')}
               />
-              <Box title="Plan&Los" image={require('../assets/plan-los.jpg')} />
+
               <Box
                 title="PI spirit Productions"
                 image={require('../assets/pi-spirit.jpg')}
