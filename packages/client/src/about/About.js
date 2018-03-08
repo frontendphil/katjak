@@ -3,6 +3,7 @@ import React from 'react'
 
 import { defaultStyle } from '../higher-order'
 import { Markdown, Headline, Divider } from '../components'
+import { xs } from '../media'
 
 import since2016 from './since_2016.md'
 import f2014t2016 from './2014-2016.md'
@@ -66,6 +67,10 @@ const styled = defaultStyle(({ padding }) => ({
     marginBottom: padding.large,
 
     borderRadius: 20,
+
+    ...xs({
+      width: 'auto',
+    }),
   },
 }))
 

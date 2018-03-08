@@ -3,6 +3,7 @@ import React from 'react'
 
 import { defaultStyle } from '../higher-order'
 import { Markdown, Headline } from '../components'
+import { xs } from '../media'
 
 import Social from '../social'
 
@@ -27,6 +28,10 @@ const styled = defaultStyle({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+
+    ...xs({
+      flexDirection: 'column',
+    }),
   },
 })
 

@@ -3,6 +3,7 @@ import React from 'react'
 
 import { Link } from '../components'
 import { defaultStyle } from '../higher-order'
+import { xs } from '../media'
 
 function Icon({ kind, image, link, style }) {
   return (
@@ -30,6 +31,13 @@ const styled = defaultStyle(({ colors, padding }, { color }) => ({
     marginLeft: padding.normal,
 
     fontSize: 25,
+
+    ...xs({
+      padding: padding.small,
+      margin: padding.small,
+
+      fontSize: 15,
+    }),
   },
 
   icon: {

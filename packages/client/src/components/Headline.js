@@ -3,6 +3,7 @@ import * as React from 'react'
 import { compose } from 'recompose'
 
 import { defaultStyle, omitProps } from '../higher-order'
+import { xs } from '../media'
 
 type PropsT = {
   children: React.Node,
@@ -23,6 +24,10 @@ export default compose(
       fontFamily: font.family.headline,
       fontWeight: 400,
       fontStyle: 'italic',
+
+      ...xs({
+        textAlign: 'center',
+      }),
 
       '&small': {
         fontSize: 20,

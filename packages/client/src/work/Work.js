@@ -1,8 +1,9 @@
 // @flow
 import React from 'react'
 
-import { Headline, Divider } from '../components'
+import { Headline } from '../components'
 import { defaultStyle } from '../higher-order'
+import { xs } from '../media'
 
 import Box from './Box'
 import Project from './Project'
@@ -89,6 +90,10 @@ const styled = defaultStyle({
   reel: {
     display: 'flex',
     flexWrap: 'wrap',
+
+    ...xs({
+      justifyContent: 'center',
+    }),
   },
 })
 

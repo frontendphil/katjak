@@ -3,6 +3,7 @@ import React from 'react'
 import { compose } from 'recompose'
 
 import { defaultStyle } from '../higher-order'
+import { xs } from '../media'
 
 import Link from './Link'
 
@@ -27,6 +28,10 @@ function Menu({ activeStyle, style, ...rest }) {
 export default compose(
   defaultStyle(({ font, padding }) => ({
     display: 'flex',
+
+    ...xs({
+      justifyContent: 'center',
+    }),
 
     link: {
       fontFamily: font.family.headline,

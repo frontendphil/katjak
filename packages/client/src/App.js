@@ -9,6 +9,8 @@ import Work from './work'
 import About from './about'
 import Contact from './contact'
 
+import { xs } from './media'
+
 import './main.css'
 
 type PropsT = {}
@@ -88,6 +90,13 @@ const styled = defaultStyle(({ padding, font }) => ({
     padding: 50,
     paddingTop: 130,
     paddingBottom: 130,
+
+    ...xs({
+      fontSize: font.size.large,
+
+      paddingTop: 50,
+      paddingBottom: 50,
+    }),
   },
 
   claim: {
@@ -103,6 +112,10 @@ const styled = defaultStyle(({ padding, font }) => ({
     color: 'white',
 
     backgroundColor: '#ed4a57',
+
+    ...xs({
+      fontSize: font.size.normal,
+    }),
   },
 
   cat: {

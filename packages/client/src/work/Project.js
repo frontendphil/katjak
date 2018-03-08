@@ -2,6 +2,7 @@
 import React from 'react'
 
 import { defaultStyle } from '../higher-order'
+import { xs } from '../media'
 
 function Project({ time, company, project, children, style }) {
   return (
@@ -21,8 +22,18 @@ const styled = defaultStyle(({ padding }) => ({
 
   paddingBottom: padding.normal,
 
+  ...xs({
+    flexWrap: 'wrap',
+
+    padding: padding.normal,
+  }),
+
   time: {
     width: 100,
+
+    ...xs({
+      width: '50%',
+    }),
   },
 
   company: {
@@ -30,6 +41,10 @@ const styled = defaultStyle(({ padding }) => ({
 
     paddingLeft: padding.normal,
     paddingRight: padding.normal,
+
+    ...xs({
+      width: '50%',
+    }),
   },
 
   content: {
@@ -44,6 +59,15 @@ const styled = defaultStyle(({ padding }) => ({
 
     paddingLeft: padding.normal,
     paddingRight: padding.normal,
+
+    ...xs({
+      width: 'auto',
+
+      paddingLeft: 0,
+      paddingRight: 0,
+
+      paddingTop: padding.normal,
+    }),
   },
 }))
 
