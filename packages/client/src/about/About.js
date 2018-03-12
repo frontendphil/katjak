@@ -15,15 +15,11 @@ function About({ style }) {
   return (
     <div id="about">
       <Headline xlarge>About</Headline>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+      Born and raised in super-rural Brandenburg and equally rural Texas. 
+      Studied Media Literacy and graduated with a Master Degree in Multimedia Production. 
+      Worked for Mediakraft and Endemol Shine Beyond in leading editorial positions before 
+      diving into freelancing. Now developing and implementing digital concepts and strategies & 
+      creating branded and editorial content for all platforms. YouTube-Dinosaur.
       <div {...style('container')}>
         <div {...style('section')}>
           <Markdown>{since2016}</Markdown>
