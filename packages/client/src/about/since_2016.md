@@ -2,7 +2,7 @@
 
 ### Freelance
 
-Digital Concepts, Consulting, Editorial and Commercial Content Creation & Strategy
+Digital Concepts, Consulting, Editorial and Branded Content Creation & Strategy
 
 **Clients**
 
