@@ -1,10 +1,10 @@
-## Since 2016
+### Since 2016
 
-### Freelance
+## Freelance
 
 Digital Concepts, Consulting, Editorial and Branded Content Creation & Strategy
 
-**Clients**
+**Clients include:**
 
 * [Studio71](https://www.studio71.com)
 * [Load Studios](http://loadstudios.com/)
