@@ -3,15 +3,19 @@ import React from 'react'
 
 import { defaultStyle } from '../higher-order'
 import { xs } from '../media'
+import { Markdown } from '../components'
 
 function Project({ time, company, project, children, style }) {
   return (
     <div {...style}>
       <div {...style('time')}>{time}</div>
-      <div {...style('company')}>{company}</div>
+      <div {...style('company')}>
+        <Markdown inline>{company}</Markdown>
+      </div>
 
       <div {...style('content')}>
-        {children} {project ? `(${project})` : null}
+        <Markdown inline>{children}</Markdown>{' '}
+        {project && <Markdown inline>{project}</Markdown>}
       </div>
     </div>
   )

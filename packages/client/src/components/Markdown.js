@@ -3,6 +3,7 @@ import * as React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import marked from 'marked'
 import { StylesAsDataAttributes } from 'substyle-glamor'
+import { unescape } from 'lodash'
 
 import Headline from './Headline'
 import Link from './Link'
@@ -64,7 +65,7 @@ renderer.link = (href: string, title: string, text: string) =>
   renderToStaticMarkup(
     <StylesAsDataAttributes>
       <Link href={href} title={title} target="_blank" rel="noopener">
-        {text}
+        {unescape(text)}
       </Link>
     </StylesAsDataAttributes>
   )
@@ -77,8 +78,18 @@ marked.setOptions({
 
 type PropsT = {
   children: string,
+
+  inline?: boolean,
 }
 
-export default function Markdown({ children }: PropsT) {
+export default function Markdown({ children, inline }: PropsT) {
+  if (inline) {
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: marked.inlineLexer(children, []) }}
+      />
+    )
+  }
+
   return <div dangerouslySetInnerHTML={{ __html: marked(children) }} />
 }
