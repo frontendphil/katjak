@@ -47,7 +47,7 @@ function Work({ style }) {
             Director
           </Project>
 
-          <Project time="2018" project="[Plan&Los] (https://www.youtube.com/channel/UC494xOMNWa9zlCuGqLT5Rog) (funk)" company="Studio71">
+          <Project time="2018" project="Plan&Los [Plan&Los] (https://www.youtube.com/channel/UC494xOMNWa9zlCuGqLT5Rog) (funk)" company="Studio71">
             Script
           </Project>
 
