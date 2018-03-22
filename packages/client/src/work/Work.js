@@ -69,7 +69,7 @@ function Work({ style }) {
 
           <Project
             time="2016 - 2018"
-            project="Guten Morgen Internet (funk), 350+ episodes"
+            project="[Guten Morgen Internet](https://www.youtube.com/channel/UChiU8ch1Y0pE4gYFbSOA2Iw) (funk), 350+ episodes"
             company="Studio71"
           >
             Editorial Design, Production, Postproduction
