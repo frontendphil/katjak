@@ -44,7 +44,7 @@ function Work({ style }) {
           </Project>
 
           <Project time="2018" company="United Creators">
-            Director, [How to Music] (https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)
+            "[How to Music] (https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)", Director
           </Project>
 
           <Project
