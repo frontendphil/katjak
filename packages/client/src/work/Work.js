@@ -44,8 +44,8 @@ function Work({ style }) {
           </Project>
 
           <Project time="2018" company="United Creators">
-            "[How to
-            Music](https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)",
+            [How to
+            Music](https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg) (funk),
             Director
           </Project>
 
@@ -54,7 +54,7 @@ function Work({ style }) {
             project="[Plan&Los (funk)](https://www.youtube.com/channel/UC494xOMNWa9zlCuGqLT5Rog)"
             company="Studio71"
           >
-            Script
+            , Script
           </Project>
 
           <Project time="2017" company="Load Studios">
@@ -74,7 +74,7 @@ function Work({ style }) {
             project="[Guten Morgen Internet](https://www.youtube.com/channel/UChiU8ch1Y0pE4gYFbSOA2Iw) (funk), 350+ episodes"
             company="Studio71"
           >
-            Editorial Design, Production, Postproduction
+            Director + Editorial Lead
           </Project>
         </div>
       </div>
