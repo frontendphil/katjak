@@ -74,7 +74,7 @@ function Work({ style }) {
             project="[Guten Morgen Internet](https://www.youtube.com/channel/UChiU8ch1Y0pE4gYFbSOA2Iw) (funk), 350+ episodes"
             company="Studio71"
           >
-            Director + Editorial Lead
+            , Director + Editorial Lead
           </Project>
         </div>
       </div>
