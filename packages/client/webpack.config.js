@@ -2,7 +2,10 @@ const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const { NODE_ENV } = process.env
+
 module.exports = {
+  mode: NODE_ENV === 'development' ? 'development' : 'production',
   entry: {
     app: './src/index',
     vendor: [
