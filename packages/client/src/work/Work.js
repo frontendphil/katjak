@@ -44,12 +44,14 @@ function Work({ style }) {
           </Project>
 
           <Project time="2018" company="United Creators">
-            "[How to Music] (https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)", Director
+            "[How to
+            Music](https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)",
+            Director
           </Project>
 
           <Project
             time="2018"
-            project="[Plan&Los](https://www.youtube.com/channel/UC494xOMNWa9zlCuGqLT5Rog) (funk)"
+            project="[Plan&Los (funk)](https://www.youtube.com/channel/UC494xOMNWa9zlCuGqLT5Rog)"
             company="Studio71"
           >
             Script

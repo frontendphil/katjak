@@ -14,8 +14,8 @@ function Project({ time, company, project, children, style }) {
       </div>
 
       <div {...style('content')}>
-        <Markdown inline>{children}</Markdown>{' '}
-        {project && <Markdown inline>{project}</Markdown>}
+        {project && <Markdown inline>{project}</Markdown>}{' '}
+        <Markdown inline>{children}</Markdown>
       </div>
     </div>
   )
@@ -63,6 +63,7 @@ const styled = defaultStyle(({ padding }) => ({
 
     paddingLeft: padding.normal,
     paddingRight: padding.normal,
+    paddingBottom: padding.small,
 
     ...xs({
       width: 'auto',
