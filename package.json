@@ -9,11 +9,10 @@
     "start": "cd packages/server && yarn start",
     "heroku-postbuild": "yarn build",
     "lint": "eslint packages/*/src",
-    "format": "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
+    "format":
+      "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontendphil/katjak.git"
@@ -38,6 +37,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.6.1",
+    "flow-bin": "0.102.0",
     "lerna": "^2.8.0",
     "prettier": "^1.10.2",
     "rimraf": "^2.5.4"

@@ -1,10 +1,13 @@
 // @flow
-import express from 'express'
 import path from 'path'
+
+import compression from 'compression'
+import express from 'express'
 
 const { PORT = 8080 } = process.env
 
 const app = express()
+app.use(compression())
 
 console.log('App launched in: ', __dirname)
 
