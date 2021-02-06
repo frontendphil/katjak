@@ -20,9 +20,7 @@ function App({ match, style }: PropsT) {
         <Headline xlarge>Katja Kuchenbecker</Headline>
 
         <div {...style('important')}>
-          digital concepts. consulting.
-          <br />
-          editorial and branded content creation & strategy.
+          Social Media Strategy & Digital Storytelling
         </div>
 
         <div {...style('contact')}>
