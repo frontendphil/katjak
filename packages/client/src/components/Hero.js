@@ -4,6 +4,8 @@ import React from 'react'
 import { defaultStyle } from '../higher-order'
 import { xs } from '../media'
 
+import hero from '../assets/hero.jpg'
+
 function Hero({ style, children }) {
   return <div {...style}>{children}</div>
 }
@@ -20,7 +22,7 @@ const styled = defaultStyle(({ padding }) => ({
 
   height: 300,
 
-  backgroundImage: `url(${require('../assets/hero.jpg')})`,
+  backgroundImage: `url(${hero})`,
   backgroundPosition: '50%',
   backgroundSize: 'cover',
 

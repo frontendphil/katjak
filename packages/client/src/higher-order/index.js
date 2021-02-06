@@ -1,3 +1,3 @@
-export defaultStyle from './defaultStyle'
-export provideTheme from './provideTheme'
-export omitProps from './omitProps'
+export { default as defaultStyle } from './defaultStyle'
+export { default as provideTheme } from './provideTheme'
+export { default as omitProps } from './omitProps'

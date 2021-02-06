@@ -1,11 +1,14 @@
 const path = require('path')
 
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const { NODE_ENV } = process.env
 
+const isDev = NODE_ENV !== 'production'
+
 module.exports = {
-  mode: NODE_ENV === 'development' ? 'development' : 'production',
+  mode: isDev ? 'development' : 'production',
   entry: {
     app: './src/index',
     vendor: [
@@ -20,15 +23,15 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name]-[hash].js',
-    publicPath: NODE_ENV === 'development' ? '/' : '/build/',
+    filename: '[name]-[chunkhash].js',
+    publicPath: isDev ? '/' : '/build/',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: 'favicon.ico',
     }),
-  ],
+  ].filter(Boolean),
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     historyApiFallback: true,
@@ -38,7 +41,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              rootMode: 'upward',
+            },
+          },
+        ],
       },
       {
         test: /\.md$/,
@@ -51,7 +61,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

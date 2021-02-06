@@ -9,10 +9,11 @@
     "start": "cd packages/server && yarn start",
     "heroku-postbuild": "yarn build",
     "lint": "eslint packages/*/src",
-    "format":
-      "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
+    "format": "prettier --write --no-semi --single-quote --trailing-comma es5 \"{.,packages/**}/{src,specs,test}/**/*.js\""
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontendphil/katjak.git"
@@ -24,11 +25,10 @@
   },
   "homepage": "https://github.com/frontendphil/katjak#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.39",
-    "@babel/preset-env": "^7.0.0-beta.39",
-    "@babel/preset-flow": "^7.0.0-beta.39",
-    "@babel/preset-react": "^7.0.0-beta.39",
-    "@babel/preset-stage-0": "^7.0.0-beta.39",
+    "@babel/core": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/preset-flow": "7.12.13",
+    "@babel/preset-react": "7.12.13",
     "babel-eslint": "^8.1.1",
     "babel-plugin-lodash": "^3.3.2",
     "eslint": "^4.17.0",

@@ -5,6 +5,13 @@ import { Headline } from '../components'
 import { defaultStyle } from '../higher-order'
 import { xs } from '../media'
 
+import gutenMorgenInternet from '../assets/guten-morgen-internet.jpg'
+import planLos from '../assets/plan-los.jpg'
+import loadStudios from '../assets/load-studios.jpg'
+import piSpirit from '../assets/pi-spirit.jpg'
+import funkWG from '../assets/funk-wg.jpg'
+import aco from '../assets/aco.png'
+
 import Box from './Box'
 import Project from './Project'
 
@@ -17,23 +24,14 @@ function Work({ style }) {
         <div className="col-md-5">
           <div {...style('reelContainer')}>
             <div {...style('reel')}>
-              <Box
-                title="Guten Morgen Internet"
-                image={require('../assets/guten-morgen-internet.jpg')}
-              />
-              <Box title="Plan&Los" image={require('../assets/plan-los.jpg')} />
+              <Box title="Guten Morgen Internet" image={gutenMorgenInternet} />
+              <Box title="Plan&Los" image={planLos} />
 
-              <Box
-                title="Load Studios"
-                image={require('../assets/load-studios.jpg')}
-              />
+              <Box title="Load Studios" image={loadStudios} />
 
-              <Box
-                title="PI spirit Productions"
-                image={require('../assets/pi-spirit.jpg')}
-              />
-              <Box title="Funk WG" image={require('../assets/funk-wg.jpg')} />
-              <Box title="ACO" image={require('../assets/aco.png')} />
+              <Box title="PI spirit Productions" image={piSpirit} />
+              <Box title="Funk WG" image={funkWG} />
+              <Box title="ACO" image={aco} />
             </div>
           </div>
         </div>
@@ -45,8 +43,8 @@ function Work({ style }) {
 
           <Project time="2018" company="United Creators">
             [How to
-            Music](https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg) (funk),
-            Director
+            Music](https://www.youtube.com/channel/UCiaWvawn0rvka5INNSpCjJg)
+            (funk), Director
           </Project>
 
           <Project

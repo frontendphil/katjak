@@ -1,6 +1,9 @@
 // @flow
 import * as React from 'react'
 
+import katzi from './assets/Katzi.png'
+import katziWatermelon from './assets/KatziWatermelon.png'
+
 import { defaultStyle } from './higher-order'
 
 import { Menu, Divider, Hero } from './components'
@@ -20,7 +23,8 @@ function App({ match, style }: PropsT) {
     <div className="container">
       <Hero>
         <div {...style('claim')}>
-          CREATIVE CONTENT DEVELOPMENT<br /> & SOCIAL MEDIA
+          CREATIVE CONTENT DEVELOPMENT
+          <br /> & SOCIAL MEDIA
         </div>
 
         <div {...style('cat')} />
@@ -33,13 +37,10 @@ function App({ match, style }: PropsT) {
       <Divider />
 
       <div {...style('important')}>
-        <img
-          {...style('catImportant')}
-          alt="Katzi"
-          src={require('./assets/KatziWatermelon.png')}
-        />
-        digital concepts. consulting.<br />editorial and branded content
-        creation & strategy.
+        <img {...style('catImportant')} alt="Katzi" src={katziWatermelon} />
+        digital concepts. consulting.
+        <br />
+        editorial and branded content creation & strategy.
       </div>
 
       <div {...style('section')}>
@@ -127,7 +128,7 @@ const styled = defaultStyle(({ padding, font }) => ({
     height: 26,
     width: 35,
 
-    backgroundImage: `url(${require('./assets/Katzi.png')})`,
+    backgroundImage: `url(${katzi})`,
     backgroundSize: 'cover',
   },
 }))
