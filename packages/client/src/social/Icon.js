@@ -51,6 +51,7 @@ const styled = defaultStyle(({ colors, padding }, { color, image }) => ({
 
     backgroundSize: 'contain',
     backgroundImage: `url(${image})`,
+    backgroundRepeat: 'no-repeat',
   },
 }))
 
