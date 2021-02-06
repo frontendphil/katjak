@@ -35,14 +35,6 @@ const styled = defaultStyle(({ colors, padding }, { color, image }) => ({
     height: 32,
 
     backgroundColor: '#ed4a57',
-
-    fontSize: 25,
-
-    ...xs({
-      padding: padding.small,
-
-      fontSize: 15,
-    }),
   },
 
   icon: {
