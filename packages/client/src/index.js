@@ -5,7 +5,7 @@ import { StylesAsDataAttributes } from 'substyle-glamor'
 
 import 'flexboxgrid/dist/flexboxgrid.min.css'
 
-import App from './App'
+import App from './RedactedApp'
 
 ReactDOM.render(
   <StylesAsDataAttributes>
