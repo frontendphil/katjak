@@ -2,8 +2,7 @@
 import React from 'react'
 
 import { defaultStyle } from '../higher-order'
-import { Markdown, Headline } from '../components'
-import { xs } from '../media'
+import { Markdown } from '../components'
 
 import Social from '../social'
 
@@ -11,12 +10,10 @@ import content from './content.md'
 
 function Contact({ style }) {
   return (
-    <div id="contact">
-      <Headline xlarge>Contact</Headline>
+    <div {...style('content')} id="contact">
+      <Markdown>{content}</Markdown>
 
-      <div {...style('content')}>
-        <Markdown>{content}</Markdown>
-
+      <div {...style('social')}>
         <Social />
       </div>
     </div>
@@ -26,12 +23,14 @@ function Contact({ style }) {
 const styled = defaultStyle({
   content: {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
 
-    ...xs({
-      flexDirection: 'column',
-    }),
+    textAlign: 'center',
+  },
+
+  social: {
+    marginTop: 100,
   },
 })
 

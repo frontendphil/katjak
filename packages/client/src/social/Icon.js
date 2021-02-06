@@ -9,13 +9,13 @@ function Icon({ kind, image, link, style }) {
   return (
     <Link {...style} to={link} target="_blank" rel="noopener">
       <div {...style('container')}>
-        <div {...style('icon')} className={`socicon-${kind}`} />
+        <div {...style('icon')} />
       </div>
     </Link>
   )
 }
 
-const styled = defaultStyle(({ colors, padding }, { color }) => ({
+const styled = defaultStyle(({ colors, padding }, { color, image }) => ({
   textDecoration: 'none',
   cursor: 'pointer',
 
@@ -24,24 +24,26 @@ const styled = defaultStyle(({ colors, padding }, { color }) => ({
   },
 
   container: {
+    display: 'flex',
+
+    justifyContent: 'center',
+    alignItems: 'center',
+
     borderRadius: '50%',
-    border: `1px solid ${colors.mono.lighter}`,
 
-    padding: padding.normal,
-    marginLeft: padding.normal,
+    width: 32,
+    height: 32,
 
-    fontSize: 25,
-
-    ...xs({
-      padding: padding.small,
-      margin: padding.small,
-
-      fontSize: 15,
-    }),
+    backgroundColor: '#ed4a57',
   },
 
   icon: {
-    color: color || colors.mono.lighter,
+    width: 24,
+    height: 24,
+
+    backgroundSize: 'contain',
+    backgroundImage: `url(${image})`,
+    backgroundRepeat: 'no-repeat',
   },
 }))
 

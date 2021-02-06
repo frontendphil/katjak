@@ -56,9 +56,12 @@ function About({ style }) {
 }
 
 const styled = defaultStyle({
-  display: 'flex',
+  display: 'grid',
 
-  justifyContent: 'center',
+  gridTemplateColumns: 'auto auto auto auto auto auto',
+  gridGap: 10,
+
+  justifyItems: 'center',
 })
 
 export default styled(About)
