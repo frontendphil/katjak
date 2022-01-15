@@ -19,7 +19,7 @@
     "flexboxgrid": "^6.3.1",
     "glamor": "^2.20.40",
     "lodash": "4.17.19",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "recompose": "^0.26.0",
